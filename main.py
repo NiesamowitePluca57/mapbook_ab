@@ -195,6 +195,4 @@ map_widget.set_position(52.2, 21.0)
 map_widget.grid(row=0, column=0)
 
 
-
-
 root.mainloop()

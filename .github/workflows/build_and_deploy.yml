@@ -1,0 +1,27 @@
+name: build and push
+
+on:
+  push:
+    - env-test
+    - env-qa
+
+
+permissions:
+  contents: read
+  packages: write
+
+jobs:
+  build-and-deploy:
+    name: build & deploy
+    runs-on:
+      - self-hosted
+
+    environment: ${{ github.ref_name }}
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: build and setting docker environment on server
+
+    run:
+      docker-compose -f ./docker-compose/docker-compose.yml -p mapbook_ab up --build -d
