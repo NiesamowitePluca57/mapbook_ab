@@ -23,5 +23,5 @@ jobs:
 
       - name: build and setting docker environment on server
 
-    run:
-      docker-compose -f ./docker-compose/docker-compose.yml -p mapbook_ab up --build -d
+        run:
+          docker-compose -f ./docker-compose/docker-compose.yml -p mapbook_ab up --build -d
