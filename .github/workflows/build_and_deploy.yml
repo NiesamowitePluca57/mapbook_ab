@@ -2,8 +2,6 @@ name: build and push
 
 on:
   push:
-    - env-test
-    - env-qa
 
 
 permissions:
